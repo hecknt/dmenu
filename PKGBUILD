@@ -2,7 +2,7 @@
 
 _pkgname=dmenu
 pkgname=$_pkgname-hec-git
-pkgver=5.0
+pkgver=5.0.r2.6604324
 pkgrel=1
 pkgdesc="A generic menu for X, patched for centering, borders, numbers, line height, and fuzzy matching/highlighting"
 url="http://tools.suckless.org/dmenu/"
@@ -16,8 +16,8 @@ source=(git+https://github.com/hecknt/dmenu)
 sha256sums=('SKIP')
 
 pkgver() {
-  cd $_pkgname
-  git describe --tags --long | sed 's/-/./g'
+	cd "${_pkgname}"
+    printf "5.0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build(){
