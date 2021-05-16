@@ -2,7 +2,7 @@
 
 _pkgname=dmenu
 pkgname=$_pkgname-hec-git
-pkgver=5.0.r2.6604324
+pkgver=5.0.r3.77d7b28
 pkgrel=1
 pkgdesc="A generic menu for X, patched for centering, borders, numbers, line height, and fuzzy matching/highlighting"
 url="http://tools.suckless.org/dmenu/"
@@ -29,6 +29,8 @@ build(){
 
 package() {
   cd $_pkgname
+  mkdir -p "$pkgdir"/opt/"$pkgname"
+  cp -rf * "$pkgdir"/opt/"$pkgname"
   make PREFIX=/usr DESTDIR="$pkgdir" install
   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 }
