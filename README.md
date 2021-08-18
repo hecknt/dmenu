@@ -41,8 +41,8 @@ $ sudo make install
 From here, you will be able to run `dmenu_run` in your terminal to get an application launcher.
 
 ### The archlinux way
-[Arch linux](https://archlinux.org) has a tool known as `makepkg`, which can effectively be used to install PKGBUILDS, and this repository has one of those.  
-Make sure you have `git` and `base-devel` installed before you run these commands:
+[Arch linux](https://archlinux.org) has a tool known as `makepkg`, which can effectively be used to install PKGBUILDS. This repository has a PKGBUILD.  
+Install `git` and `base-devel` and run these commands:
 ```sh
 $ git clone https://github.com/hecknt/dmenu
 $ cd dmenu
